@@ -2,22 +2,22 @@
     box-sizing:border-box;
 }
 body, h1, h2, p, ul, li, form {
-    margin: 0;
+    margin:  0; /*this makes the background on the navHome.html work (dont put to 0 idk why)*/
     padding: 0;
 }
-
-
 body {
-    background: linear-gradient(135deg, #91ff91, #78ddff);
+    background: linear-gradient(to right, #b5fffb, #78ddff,#13fff3);
     /*background: radial-gradient(#ff0f0f, #000000, #ffffff);*/
     font-family: 'Arial', sans-serif;
     color: #333;
 }
 
-
+a{
+  text-decoration: none;
+  color:#000;
+}
 header {
     background: rgba(0, 0, 0, .8);
-    color: rgba(0, 0, 0, 0.1);
     padding: 10px;
     /*position: fixed;*/
     width: 100%;
@@ -31,31 +31,28 @@ nav ul {
 
 nav li {
     display: inline;
-    margin-right: 20px;
+    padding: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 1s;
 }
 
 nav a:hover {
-    color: #ff6600;
+    color: #c5ff32;
 }
-.active {
-    color: rgb(0, 0, 0); /* Set text color to black */
-    background-color: rgb(255, 255, 255); /* Set background color to white */
+.active a{
+    font-size:larger;
+    color:#f12727;
 }
-
 
 main {
     max-width: 800px;
     margin: 80px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -66,14 +63,20 @@ h1, h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 #section1{
-    text-align:center;
+    text-align:left;
+    margin-left:20px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
 }
 
+#section1 h1 {
+  padding: 20px; /* Add padding to the left side of the text */
+}
 #section1 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 20px 0 20px 20px;
     border: 2px solid #333;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
@@ -90,8 +93,39 @@ h1, h2 {
     /*transform: scaleX(5);*/
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+#section2 {
+  text-align:left;
+  grid-column: 2;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left:400px;
+}
 
 
+#section2 p {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif; /* Change the font family */
+    font-size: 18px; /* Adjust the font size */
+    color: #333; /* Change the text color */
+    border-radius: 5px; /* Add border radius to create rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow for depth */
+    line-height: 1.6; /* Adjust the line height for better readability */
+    text-align: left; /* Set the text alignment to left */
+    max-width:max-content;
+}
 
 
 ul {
@@ -100,26 +134,29 @@ ul {
 }
 
 #ContactSect {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 44px;
+  padding: 20px;
+  width: 40%;
+  height:100%;
+  background-color: #f9f9f9;
 }
 
+
 #ContactSect h2 {
-    color: #333;
-    margin-bottom: 15px;
+    color: #000;
     font-size: 24px;
 }
 
 #ContactSect p {
-    color: #666;
+    color: #000;
     margin-bottom: 20px;
     font-size: 16px;
 }
 
-
+/*css  for contact*/
 form {
     margin-top: 20px;
 }
@@ -130,20 +167,20 @@ label {
     margin-bottom: 5px;
     font-size: 18px;
 }
-/*input for contact*/
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 textarea {
-    resize: vertical; 
+    resize: horizontal; 
 }
 
 input[type="submit"] {
@@ -153,22 +190,218 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background .3s;
     font-size: 18px;
 }
 
 input[type="submit"]:hover {
-    background: #ffa600;
-    color:rgb(0,0,0,1);
+    background: #01ff0d;
+    color:rgb(95, 19, 90);
+}
+.ContactGif{
+  flex-direction:row;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+  margin-left:40%; /*40% bc contact page is from 0% to 40%*/
+  padding-left:5%; /*5% more away from the contage page*/
+
+}
+.LandingGif{
+  flex-direction:column;
+  justify-content:center;
+
 }
 
-
-
+/*footer of all pages*/
 footer {
-    text-align: center;
-    background: #333;
-    color: #fff;
+  background-color: inherit;
+  font-family:'Helvetica', Times, serif;
+    position: fixed; /* Fixed position to stay at the bottom of the screen */
+    text-align: left;
+    margin-left:10px;
+    color: #000000;
     padding: 10px 0;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
 }
+/*for landing page*/
+.menu-toggler {
+  position: absolute;
+  display: block;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  margin:auto;
+  width:40px;
+  height:40px;
+  z-index:2;
+  opacity:0;
+  cursor:pointer;
+}
+.menu-toggler:hover + label,
+.menu-toggler:hover + label:before,
+.menu-toggler:hover + label:after{
+  background: white;
+}
+.menu-toggler:checked + label {
+  background: transparent;
+}
+.menu-toggler:checked + label:before,
+.menu-toggler:checked + label:after{
+  top:0;
+  width:40px;
+  transform-origin: 50% 50%;
+}
+.menu-toggler:checked + label:before {
+  transform: rotate(45deg) translateY(-15px) translateX(-15px);
+}
+.menu-toggler:checked + label:after {
+  transform: rotate(-45deg);
+}
+.menu-toggler:checked ~ ul .menu-item { 
+  opacity: 1;
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+  transform: rotate(0deg) translate(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+  transform: rotate(60deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+  transform: rotate(120deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+  transform: rotate(180deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+  transform: rotate(240deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+  transform: rotate(300deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item a {
+  pointer-events:auto;
+}
+.menu-toggler + label {
+  width: 40px;
+  height: 5px;
+  display: block;
+  transition: transform 0.5s top 0.5s;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.menu-toggler + label:after {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgb(0, 0, 0);
+  transition: transform 0.5s top 0.5s;
+  content: "";
+  display: block;
+
+}
+.menu-toggler + label:before {
+  top: 10px;
+}
+.menu-toggler + label:after {
+  top: -10px;
+}
+.menu-item:nth-child(1) a {
+  transform: rotate(0deg);
+}
+.menu-item:nth-child(2) a {
+  transform: rotate(300deg);
+}
+.menu-item:nth-child(3) a {
+  transform: rotate(240deg);
+}
+.menu-item:nth-child(4) a {
+  transform: rotate(180deg);
+}
+.menu-item:nth-child(5) a {
+  transform: rotate(120deg);
+}
+.menu-item:nth-child(6) a {
+  transform: rotate(60deg);
+}
+.menu-item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.menu-item a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(98, 98, 170, 0.7);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.menu-item a:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#error-text {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 5%;
+  text-align:center;
+  line-height:50%;
+  animation: pulse 2s ease infinite;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+#threeCanvas {
+
+  width: 100%;
+  height: 50%;
+}
+
+
+.resume-container {
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container */
+  border: 2px solid #333; /* Border color and thickness */
+  padding: 20px; /* Padding around the content within the container */
+  background-image:url(justin.jpg);
+}
+
+
