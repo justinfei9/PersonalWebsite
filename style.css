@@ -280,6 +280,9 @@ footer {
 .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
   transform: rotate(300deg) translateX(-110px);
 }
+.menu-toggler:checked ~ ul .menu-item:nth-child(7) {
+  transform: rotate(360deg) translateY(140px) translateX(5px);
+}
 .menu-toggler:checked ~ ul .menu-item a {
   pointer-events:auto;
 }
@@ -315,7 +318,7 @@ footer {
   top: -10px;
 }
 .menu-item:nth-child(1) a {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .menu-item:nth-child(2) a {
   transform: rotate(300deg);
@@ -331,6 +334,9 @@ footer {
 }
 .menu-item:nth-child(6) a {
   transform: rotate(60deg);
+}
+.menu-item:nth-child(7) a {
+  transform: rotate(0deg);
 }
 .menu-item {
   position: absolute;
@@ -405,3 +411,35 @@ footer {
 }
 
 
+/*
+FOR PROJECT PAGE
+*/
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+
+.album {
+  width: 250px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.album img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Additional Styles - Replace with your own styles */
+.album h2 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 10px;
+}
