@@ -12,7 +12,7 @@ const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Create cube
-const geometry = new THREE.BoxGeometry(1, 1.5, 1);
+const geometry = new THREE.BoxGeometry(1, 1.1, 1);
 const texture = new THREE.TextureLoader().load('error.png');
 const material = new THREE.MeshStandardMaterial({ map: texture });
 const cube = new THREE.Mesh(geometry, material);
@@ -20,7 +20,7 @@ scene.add(cube);
 
 
 // Add lighting
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0x999999, 0.5);
 scene.add(ambientLight);
 
 const pointLight = new THREE.PointLight(0xffffff, 1);
