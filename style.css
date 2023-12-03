@@ -260,29 +260,30 @@ footer {
   opacity: 1;
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
-  transform: rotate(0deg) translate(110px);
+  transform: rotate(0deg) translate(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
-  transform: rotate(45deg) translateX(110px);
+  transform: rotate(45deg) translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
-  transform: rotate(90deg) translateX(110px);
+  transform: rotate(90deg) translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
-  transform: rotate(135deg) translateX(110px);
+  transform: rotate(135deg) translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
-  transform: rotate(180deg) translateX(110px);
+  transform: rotate(180deg) translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
-  transform: rotate(225deg) translateX(110px);
+  transform: rotate(225deg) translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(7) {
-  transform: rotate(270deg)translateX(110px);
+  transform: rotate(270deg)translateX(100px);
 }
 .menu-toggler:checked ~ ul .menu-item:nth-child(8) {
-  transform: rotate(315deg)translateX(110px);
+  transform: rotate(315deg)translateX(100px);
 }
+
 .menu-toggler:checked ~ ul .menu-item a {
   pointer-events:auto;
 }
@@ -335,7 +336,10 @@ footer {
   transform: rotate(-225deg);
 }
 .menu-item:nth-child(7) a {
-  transform: rotate(-275deg);
+  transform: rotate(-270deg);
+}
+.menu-item:nth-child(8) a {
+  transform: rotate(-315deg);
 }
 .menu-item {
   position: absolute;
@@ -400,15 +404,33 @@ footer {
   height: 50%;
 }
 
-
+/*
+FOR RESUME
+*/
 .resume-container {
-  max-width: 800px; /* Adjust the width as needed */
+  background-color:#b6d4d4;
   margin: 0 auto; /* Center the container */
   border: 2px solid #333; /* Border color and thickness */
   padding: 20px; /* Padding around the content within the container */
-  background-image:url(justin.jpg);
 }
 
+.resume-container  hr {
+  border: 1px solid #777;
+  margin: 10px;
+}
+
+.resume-container p,h1{
+  color:#000;
+  font-weight:bold;
+}
+.resume-container li{
+  margin-left:50px;
+  color:#222;
+  font-size:18px;
+}
+.resume-container h3{
+  color:#111;
+}
 
 /*
 FOR PROJECT PAGE
@@ -418,7 +440,7 @@ FOR PROJECT PAGE
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   margin: 0 auto;
-  justify-items: center
+  justify-items: center;
 }
 
 
@@ -439,7 +461,7 @@ FOR PROJECT PAGE
   max-width: 200px;
 }
 
-/* Additional Styles - Replace with your own styles */
+
 .album h2 {
   color: #333;
   font-size: 20px;
