@@ -6,7 +6,9 @@ body, h1, h2, p, ul, li, form {
     padding: 0;
 }
 body {
+  
     background: linear-gradient(to right, #b5fffb, #78ddff,#13fff3);
+    background: linear-gradient(to right, #7F7FD5     , #91EAE4);
     /*background: radial-gradient(#ff0f0f, #000000, #ffffff);*/
     font-family: 'Arial', sans-serif;
     color: #333;
