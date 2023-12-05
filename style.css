@@ -67,7 +67,7 @@ h1, h2 {
 .hp{
   text-align:center;
   margin-top: 20px;
-  color:000;
+  color:#000;
 }
 #section1{
   grid-column: 1;
@@ -210,7 +210,6 @@ input[type="submit"]:hover {
 .LandingGif{
   display: flex;
   flex-direction:column;
-  align-items: left;
 }
 .LandingGif img{
   max-width:200px;
@@ -292,7 +291,7 @@ footer {
 }
 
 .menu-toggler:checked ~ ul .menu-item a {
-  pointer-events:auto;
+  pointer-events:all;
 }
 .menu-toggler + label {
   width: 40px;
