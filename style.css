@@ -64,6 +64,11 @@ h1, h2 {
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+.hp{
+  text-align:center;
+  margin-top: 20px;
+  color:000;
+}
 #section1{
   grid-column: 1;
   grid-row: span 2;
@@ -98,7 +103,7 @@ h1, h2 {
   flex-direction: row-reverse;
   align-items: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .grid-container {
       width: 100%;
       display:flex;
@@ -116,7 +121,6 @@ h1, h2 {
   padding-left:50px;
   padding-right:50px;
   gap: 70px;
-  max-width:100%;
 }
 
 
@@ -140,14 +144,13 @@ ul {
 }
 
 #ContactSect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 44px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: left;
   padding: 20px;
-  width: 40%;
-  height:100%;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  background-color: #f4f4f4;
 }
 
 
@@ -204,18 +207,13 @@ input[type="submit"]:hover {
     background: #01ff0d;
     color:rgb(95, 19, 90);
 }
-.ContactGif{
-  flex-direction:row;
-  justify-content: space-evenly;
-  flex-wrap:wrap;
-  margin-left:40%; /*40% bc contact page is from 0% to 40%*/
-  padding-left:5%; /*5% more away from the contage page*/
-
-}
 .LandingGif{
+  display: flex;
   flex-direction:column;
-  justify-content:center;
-
+  align-items: left;
+}
+.LandingGif img{
+  max-width:200px;
 }
 
 /*footer of all pages*/
