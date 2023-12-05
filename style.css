@@ -187,6 +187,10 @@ textarea {
     border-radius: 5px;
     font-size: 20px;
 }
+input[type="message"],
+textarea {
+  max-width:100%;
+}
 
 textarea {
     resize: horizontal; 
