@@ -464,10 +464,14 @@ FOR PROJECT PAGE
 .album img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
   max-width: 200px;
-  border-radius: 10px;
+  border-radius:10px;
 }
+
+.album img:hover {
+  opacity: 0.7;
+}
+
 
 
 .album h2 {
